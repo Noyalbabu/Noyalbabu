@@ -1,39 +1,60 @@
-body{ text-align: justify;
+body{ text-align: center;
   
-background-color :coral;}
+background-color :silver;}
 
-h1{ text-underline-position: below;
-    font-size: 150 px ;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+h1{ color: black;
+
+    font-size: 250 px ;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: center;
-    text-decoration: powderblue;
-font-style:italic;}
-a{
-    font-size: 50px;
+    }
+#frmRegister{
+  text-align: center;
+  width: 300px;
+  margin: 20vh auto 0 auto;
+  padding: 20px;
+  border: black;
 }
-a:link {
-    color: green;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  
-  a:visited {
-    color:red;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color:lawngreen;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-  
-  a:active {
-    color: yellow;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-.mistake{
-  color: red;
+#frmRegister button{
+  margin-top: 10px;
+  background-color:coral;
+  border: none;
+  border-radius: 4px;
+
 }
+#frmRegister label{
+ 
+  font-size: 30px;
+  color: blue;
+  
+}
+.input-control{
+  display: flex;
+  flex-direction: column;
+}
+.input-control input{
+
+  display:block;
+  border:solid white ;
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 10px;
+  width:100%;
+}
+
+.input-control.success input{
+  border-color: green;
+}
+
+.input-control.error input{
+  border-color: red;
+
+}
+.input-control.error{
+  color:red;
+  font-size: 10px;
+  
+}
+
+
+
