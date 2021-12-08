@@ -1,0 +1,39 @@
+body{ text-align: justify;
+  
+background-color :coral;}
+
+h1{ text-underline-position: below;
+    font-size: 150 px ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    text-decoration: powderblue;
+font-style:italic;}
+a{
+    font-size: 50px;
+}
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color:red;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color:lawngreen;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+.mistake{
+  color: red;
+}

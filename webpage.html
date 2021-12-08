@@ -1,0 +1,49 @@
+
+<HTML>
+    <head>
+        <title>Learning in Progress</title>
+        <link rel = "stylesheet" href = "style.css">
+        <script src = "script.js" defer >
+           
+        </script>
+          
+   
+        
+    </head>
+    <Body >
+        <h1 >Form Registration</h1>
+        <form id ="frmRegister" name = "frmRegister" method = "post" action = "" onsubmit="return validateForm()">
+            <label for = "frmForename">Fore name:</label><br>
+             <input type = "textbox" id = "frmForename" name = "frmForename" placeholder="Your name"><br>
+             <div class = "mistake" id = "errormsg" ></div>
+             <label for = "frmSurname"> Surname :</label><br>
+             <input type = "textbox" id = "frmSurname" name = "frmSurname" placeholder="given in passport" >
+             <br>
+            <div class = "error" id = "errormsg" ></div>
+             <p>what is gender identity ?</p>
+             <input type = "radio" name = "frmGender" id = "male" value = "Male">Male
+             
+             <input type = "radio" name = "frmGender" id = "female" value = "Female">Female
+        
+             <input type = "radio" name = "frmGender" id = "other" value = "Prefer not to say"> Prefer not to say
+             
+             <br>
+             <label for = "frmDOB">Date of birth:</label>
+             <input type = "date" id = "frmDOB" name = "frmDOB"><br>
+             <label for= "age">Entre your Age:</label>
+            <input type = "text" name = "age " id = "age"><br>
+            <label for = "frmCourse">Choose your course:<label>
+            <select id = "frmCourse" name = "frmCourse">
+                <option value="cs">Computer Science</option>
+                <option value="maths">Mathematics</option>
+                <option value = "finance">Finance</option>
+                <option value="Application Science">Application Science</option>
+            </select>     
+            <br>
+            <label for = "frmDateReg">Date of registration :</label>
+            <input type= "date" name = "frmDateReg" id = "frmDateReg" /> <br>
+             <button type = "submit" >submit</button>
+        </form>
+            
+    </Body>
+</HTML>
