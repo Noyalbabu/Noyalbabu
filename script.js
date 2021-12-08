@@ -8,7 +8,7 @@
     if(re.test(checkForename) && (re.test(check))){
         return true;
     }
-    else if()
+    else
     {
         document.getElementById("errormsg").innerHTML= "Enter a valid name";
         return false;
