@@ -7,7 +7,7 @@ var age = document.getElementById("frmage");
 var course = document.getElementById("frmCourse");
 var registerdate = document.getElementById("frmDateReg");
 var re = /^[A-Za-z]{2,}$/;
-var checkAge = /^[12-150]$/;
+
 function validateInput(){
     
     if(re.test(forename.value.trim())){
@@ -23,13 +23,7 @@ function validateInput(){
     else{
         fail(surname,"Enter a valid name");
     }
-    
-    if(checkAge.test(age.value.trim())){
-        success(age);
-    }else{
-        fail(age,"You are not eligible");
-    }
-    
+        
 }
 
 document.querySelector("button")
