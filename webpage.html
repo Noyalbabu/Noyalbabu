@@ -13,16 +13,16 @@
     <Body >
         <div class = "container">
             <h1 >Form Registration</h1>
-            <form id ="frmRegister" name = "frmRegister" method = "post" action = "" onsubmit="return validateForm()">
+            <form id ="frmRegister" name = "frmRegister" method = "post" action = "" >
                 
                 <div class = "input-control">
                     <label for = "frmForename">Fore name:</label>
                     <input type = "textbox" id = "frmForename" name = "frmForename" placeholder="Your name"> 
-                    <div class = "error"></div>
+                    <div class = "error">Error </div>
                 </div>
                  <div class = "input-control"><label for = "frmSurname"> Surname :</label>
                     <input type = "textbox" id = "frmSurname" name = "frmSurname" placeholder="given in passport" >
-                <div class = "error"></div>
+                <div class = "error">Error</div>
                 </div>
                 <div class= "input-control">
                     <label for="frmGender">Choose your gender:</label><br>
@@ -32,17 +32,17 @@
             
                  <input type = "radio" name = "frmGender" id = "frmGender" value = "Prefer not to say"> Prefer not to say
             
-                 <div class="error"></div>
+                 <div class="error">Error</div>
                 </div>
                 <div class="input-control">
                     <label for = "frmDOB">Date of birth:</label>
                     <input type = "date" id = "frmDOB" name = "frmDOB">
-                    <div class="error"></div>
+                    <div class="error">Error</div>
                 </div>
                  <div class="input-control">
                     <label for= "age">Enter your Age:</label>
                     <input type = "text" name = "age " id = "age"placeholder = "your present age">
-                    <div class="error"></div>
+                    <div class="error">Error</div>
                  </div>
                  <div class="input-control">
                     <label for = "frmCourse">Choose your course:<label>
@@ -52,14 +52,14 @@
                             <option value = "finance">Finance</option>
                             <option value="Application Science">Application Science</option>
                         </select>     
-                        <div class="error"></div>
+                        <div class="error">Error</div>
                  </div>
                 <div class="input-control">
                     <label for = "frmDateReg">Date of registration :</label>
                     <input type= "date" name = "frmDateReg" id = "frmDateReg" /> <br>
-                     <div class="error"></div>
+                     <div class="error">Error</div>
                 </div>
-                <button type = "submit" >submit</button>
+                <button type = "submit" id = "button">Submit Form</button>
             </form>
         </div>
         

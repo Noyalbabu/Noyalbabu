@@ -6,57 +6,51 @@ h1{ color: black;
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     }
+.container h1{
+  background-color: cornflowerblue;
+}
 #frmRegister{
-  width: 300px;
-  margin: 20vh auto 0 auto;
+  width: 350px;
+  margin: 10vh auto 0 auto;
   padding: 20px;
   border: black solid 2px;
 }
+
 #frmRegister button{
+  cursor: pointer;
   margin-top: 10px;
-  background-color:coral;
-  border: none;
+  padding: 10px 20px;
+  background-color:cornflowerblue;
+  border: 2px solid;
   border-radius: 4px;
+  width: 100%;
 
 }
 #frmRegister label{
- 
-  font-size: 30px;
-  color: blue;
+  display: inline-block;
+  margin-bottom:5px;
+  font-size: 20px;
+  color:blue;
   
 }
 .input-control{
-  display: flex;
+  display: flex; 
   flex-direction: column;
 }
 .input-control input{
 
   display:block;
-  border:solid white ;
+  border:2px solid silver  ;
   border-radius: 4px;
   font-size: 20px;
   padding: 10px;
   width:100%;
 }
-
-.input-control input:focus{ 
-  outline:0;
-}
-.input-control.success input{
-  border-color: green;
-}
-
-.input-control.error input{
-  border-color: red;
-
-}
-.input-control.error {
+.error{
   color: red;
-  font-size: 10px;
-  height : 15px;
-
+  margin: 3px;
+  visibility: hidden;
 }
-
 
 
 
