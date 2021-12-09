@@ -18,11 +18,11 @@
                 <div class = "input-control">
                     <label for = "frmForename">Fore name:</label>
                     <input type = "textbox" id = "frmForename" name = "frmForename" placeholder="Your name"> 
-                    <div class = "error">Error </div>
+                    <small>Error</small>
                 </div>
                  <div class = "input-control"><label for = "frmSurname"> Surname :</label>
                     <input type = "textbox" id = "frmSurname" name = "frmSurname" placeholder="given in passport" >
-                <div class = "error">Error</div>
+                    <small>Error</small>
                 </div>
                 <div class= "input-control">
                     <label for="frmGender">Choose your gender:</label><br>
@@ -30,19 +30,18 @@
                 
                  <input type = "radio" name = "frmGender" id = "femafrmGenderle" value = "Female">Female
             
-                 <input type = "radio" name = "frmGender" id = "frmGender" value = "Prefer not to say"> Prefer not to say
-            
-                 <div class="error">Error</div>
+                 <input type = "radio" name = "frmGender" id = "frmGender" value = "Prefer not to say" checked> Prefer not to say
+                 <small>Error</small>
                 </div>
                 <div class="input-control">
                     <label for = "frmDOB">Date of birth:</label>
                     <input type = "date" id = "frmDOB" name = "frmDOB">
-                    <div class="error">Error</div>
+                    <small>Error</small>
                 </div>
                  <div class="input-control">
-                    <label for= "age">Enter your Age:</label>
-                    <input type = "text" name = "age " id = "age"placeholder = "your present age">
-                    <div class="error">Error</div>
+                    <label for= "frmage">Enter your Age:</label>
+                    <input type = "text" name = "frmage " id = "frmage"placeholder = "your present age">
+                    <small>Error</small>
                  </div>
                  <div class="input-control">
                     <label for = "frmCourse">Choose your course:<label>
@@ -50,16 +49,18 @@
                             <option value="cs">Computer Science</option>
                             <option value="maths">Mathematics</option>
                             <option value = "finance">Finance</option>
-                            <option value="Application Science">Application Science</option>
+                            <option value="Application Science" checked>Application Science</option>
                         </select>     
-                        <div class="error">Error</div>
+                        <small>Error</small>
                  </div>
                 <div class="input-control">
                     <label for = "frmDateReg">Date of registration :</label>
                     <input type= "date" name = "frmDateReg" id = "frmDateReg" /> <br>
                      <div class="error">Error</div>
                 </div>
-                <button type = "submit" id = "button">Submit Form</button>
+                <div class="input-controll">
+                    <button type = "submit" >Submit Form</button>
+                </div>        
             </form>
         </div>
         
