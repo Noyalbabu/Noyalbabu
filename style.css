@@ -1,19 +1,16 @@
-body{ text-align: center;
-  
+body{ 
 background-color :silver;}
 
 h1{ color: black;
-
     font-size: 250 px ;
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     }
 #frmRegister{
-  text-align: center;
   width: 300px;
   margin: 20vh auto 0 auto;
   padding: 20px;
-  border: black;
+  border: black solid 2px;
 }
 #frmRegister button{
   margin-top: 10px;
@@ -42,6 +39,9 @@ h1{ color: black;
   width:100%;
 }
 
+.input-control input:focus{ 
+  outline:0;
+}
 .input-control.success input{
   border-color: green;
 }
@@ -50,11 +50,13 @@ h1{ color: black;
   border-color: red;
 
 }
-.input-control.error{
-  color:red;
+.input-control.error {
+  color: red;
   font-size: 10px;
-  
+  height : 15px;
+
 }
+
 
 
 

@@ -1,16 +1,12 @@
-function validateForm()
- { 
-    
-    var re = /^[A-Za-z]{2,}$/;
-    var checkForename = document.getElementById("frmForename").value;
-    var checkSurname = document.getElementById("frmSurname").value;
-    if(re.test(checkForename)){
-        return true;
-    }
-    else
-    {
-        document.getElementById("errormsg").innerHTML= "Enter a valid name";
-        return false;
-    }
- }
+var form = document.getElementById("frmRegister");
+var forename = document.getElementById("frmForename");
+var surname = document.getElementById("frmSurname");
+var gender = document.getElementById("frmGender");
+var dob = document.getElementById("frmDOB");
+var age = document.getElementById("age");
+var course = document.getElementById("frmCourse");
+var registerdate = document.getElementById("frmDateReg");
 
+form.addEventListener("submit",e => {
+    e.
+}
