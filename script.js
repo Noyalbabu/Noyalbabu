@@ -4,14 +4,15 @@ var surname = document.getElementById("frmSurname");
 var gender = document.getElementById("frmGender");
 var dob = document.getElementById("frmDOB");
 var age = document.getElementById("frmage");
-var course = document.getElementById("frmCourse");
 
+var course = document.getElementById("frmCourse");
+var today = new Date();
+var date = today.getDate()+"-"+(today.getMonth()+1) + "-"+ today.getFullYear();
+document.getElementById("frmDateReg").value = date;
 var re = /^[A-Za-z]{2,}$/;
 
 function validateInput(){
-    var today = new Date();
-    var regdate = today.getDate();
-    document.getElementById("frmDateReg")= regdate;
+    
     var checkAge = parseInt(age.value); 
     document.getElementById("")
     if(re.test(forename.value.trim())){

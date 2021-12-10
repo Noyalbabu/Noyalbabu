@@ -16,16 +16,16 @@
             <form id ="frmRegister" name = "frmRegister" method = "post" action = "" >
                 
                 <div class = "input-control">
-                    <label for = "frmForename">Fore name:</label>
+                    <label for = "frmForename"><b>Fore name:</b></label>
                     <input type = "textbox" id = "frmForename" name = "frmForename" placeholder="Your name"> 
                     <small>Error</small>
                 </div>
-                 <div class = "input-control"><label for = "frmSurname"> Surname :</label>
+                 <div class = "input-control"><label for = "frmSurname"> <b>Surname:</b></label>
                     <input type = "textbox" id = "frmSurname" name = "frmSurname" placeholder="given in passport" >
                     <small>Error</small>
                 </div>
                 <div class= "input-control">
-                    <label for="frmGender">Choose your gender:</label><br>
+                    <label for="frmGender"><b>Choose your gender:</b></label><br>
                  <input type = "radio" name = "frmGender" id = "frmGender" value = "Male">Male
                 
                  <input type = "radio" name = "frmGender" id = "femafrmGenderle" value = "Female">Female
@@ -34,37 +34,37 @@
                  <small>Error</small>
                 </div>
                 <div class="input-control">
-                    <label for = "frmDOB">Date of birth:</label>
+                    <label for = "frmDOB"><b>Date of birth:</b></label>
                     <input type = "date" id = "frmDOB" name = "frmDOB" min = "1900-01-01" max = "2021-12-31" value = "2002-01-01">
                     <small>Error</small>
                 </div>
                  <div class="input-control">
-                    <label for= "frmage">Enter your Age:</label>
+                    <label for= "frmage"><b>Enter your Age:</b></label>
                     <input type = "text" name = "frmage " id = "frmage"placeholder = "your present age">
                     <small>Error</small>
                  </div>
                  <div class="input-control">
-                    <label for = "frmCourse">Choose your course:<label>
+                    <label for = "frmCourse"><b>Choose your course:</b><label>
                         <select id = "frmCourse" name = "frmCourse">
-                            <option value="cs">Computer Science</option>
-                            <option value="maths">Mathematics</option>
-                            <option value = "finance">Finance</option>
-                            <option value="Application Science" checked>Application Science</option>
+                            <option value="Database">Database</option>
+                            <option value="Networks">Networks</option>
+                            <option value = "Websites">Websites</option>
+                            <option value="OOSD">OOSD</option>
                         </select>     
                         <small>Error</small>
                  </div>
                 <div class="input-control">
-                    <label for = "frmDateReg">Date of registration :</label>
+                    <label for = "frmDateReg"><b>Date of registration :</b></label>
                     <input type= "text" name = "frmDateReg" id = "frmDateReg" /> <br>
                      <small>Error</small>
                 </div>
             </div>
             <div class="input-control">
-                <button type = "reset" id = "reset">Submit </button>
-                <small>Error</small>
-            </div>   
+                <input type = "reset" name = "resetBtn" id ="resetBtn" value="Clear Form">
+                <small>Are you sure?</small>
+            </div>
             <div class = "input-control">
-                <button type = "submit">Clear</button>
+                <button type = "submit"><b>Submit</b></button>
             </div>
             </form>
         </div>
