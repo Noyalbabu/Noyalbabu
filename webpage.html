@@ -35,7 +35,7 @@
                 </div>
                 <div class="input-control">
                     <label for = "frmDOB">Date of birth:</label>
-                    <input type = "date" id = "frmDOB" name = "frmDOB">
+                    <input type = "date" id = "frmDOB" name = "frmDOB" min = "1900-01-01" max = "2021-12-31" value = "2002-01-01">
                     <small>Error</small>
                 </div>
                  <div class="input-control">
@@ -55,12 +55,17 @@
                  </div>
                 <div class="input-control">
                     <label for = "frmDateReg">Date of registration :</label>
-                    <input type= "date" name = "frmDateReg" id = "frmDateReg" /> <br>
+                    <input type= "text" name = "frmDateReg" id = "frmDateReg" /> <br>
                      <small>Error</small>
                 </div>
-                <div class="input-controll">
-                    <button type = "submit" >Submit Form</button>
-                </div>        
+            </div>
+            <div class="input-control">
+                <button type = "reset" id = "reset">Submit </button>
+                <small>Error</small>
+            </div>   
+            <div class = "input-control">
+                <button type = "submit">Clear</button>
+            </div>
             </form>
         </div>
         

@@ -5,11 +5,15 @@ var gender = document.getElementById("frmGender");
 var dob = document.getElementById("frmDOB");
 var age = document.getElementById("frmage");
 var course = document.getElementById("frmCourse");
-var registerdate = document.getElementById("frmDateReg");
+
 var re = /^[A-Za-z]{2,}$/;
 
 function validateInput(){
-    
+    var today = new Date();
+    var regdate = today.getDate();
+    document.getElementById("frmDateReg")= regdate;
+    var checkAge = parseInt(age.value); 
+    document.getElementById("")
     if(re.test(forename.value.trim())){
         success(forename);      
     }
@@ -23,7 +27,13 @@ function validateInput(){
     else{
         fail(surname,"Enter a valid name");
     }
-        
+    
+    if((checkAge >12) && (checkAge < 150)){
+            success(age);
+    }else{
+        fail(age,"You are not eligible to apply");
+    }
+
 }
 
 document.querySelector("button")
