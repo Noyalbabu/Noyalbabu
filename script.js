@@ -40,8 +40,10 @@ function userConfirmation(){
     var pop = confirm("Are you sure?");
     if(pop==true){
         displaytxt = "You pressed ok";
+        document.getElementById("resetBtn").type = "reset";
     }else{
         displaytxt = "You pressed cancel";
+        document.getElementById("resetBtn").type = "";
     }
     document.getElementById("display").innerHTML = displaytxt;
 }
