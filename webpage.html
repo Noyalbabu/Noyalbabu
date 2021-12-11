@@ -13,7 +13,7 @@
     <Body >
         <div class = "container">
             <h1 >Form Registration</h1>
-            <form id ="frmRegister" name = "frmRegister" method = "post" action = "" >
+            <form id ="frmRegister" name = "frmRegister" method = "post" action = "doNothing.html" >
                 
                 <div class = "input-control">
                     <label for = "frmForename"><b>Fore name:</b></label>
@@ -60,8 +60,9 @@
                 </div>
             </div>
             <div class="input-control">
-                <input type = "reset" name = "resetBtn" id ="resetBtn" value="Clear Form">
-                <small>Are you sure?</small>
+                <input type = "reset" name = "resetBtn" id ="resetBtn" value="Clear Form" onclick="userConfirmation()"
+                <div id="display"></div>
+                
             </div>
             <div class = "input-control">
                 <button type = "submit"><b>Submit</b></button>

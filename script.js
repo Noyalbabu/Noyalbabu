@@ -4,7 +4,6 @@ var surname = document.getElementById("frmSurname");
 var gender = document.getElementById("frmGender");
 var dob = document.getElementById("frmDOB");
 var age = document.getElementById("frmage");
-
 var course = document.getElementById("frmCourse");
 var today = new Date();
 var date = today.getDate()+"-"+(today.getMonth()+1) + "-"+ today.getFullYear();
@@ -14,7 +13,7 @@ var re = /^[A-Za-z]{2,}$/;
 function validateInput(){
     
     var checkAge = parseInt(age.value); 
-    document.getElementById("")
+    
     if(re.test(forename.value.trim())){
         success(forename);      
     }
@@ -34,13 +33,24 @@ function validateInput(){
     }else{
         fail(age,"You are not eligible to apply");
     }
-
+           
+}
+function userConfirmation(){
+    var displaytxt;
+    var pop = confirm("Are you sure?");
+    if(pop==true){
+        displaytxt = "You pressed ok";
+    }else{
+        displaytxt = "You pressed cancel";
+    }
+    document.getElementById("display").innerHTML = displaytxt;
 }
 
 document.querySelector("button")
 .addEventListener("click",(event)=>{
     event.preventDefault();
     validateInput();
+    alert("Going to submit");
 });
 
 function success(input){
