@@ -1,0 +1,27 @@
+body{
+    margin :0;
+    padding: 0;
+    box-sizing: border-box;
+    outline :none;
+    border:none;;
+    font-family: Copperplate, Papyrus, fantasy;
+}
+.container{
+    min-height: 100vh;
+    display :grid;
+    place-items: center;
+    padding-bottom: 60px;
+    background: url("https://images.unsplash.com/photo-1483181994834-aba9fd1e251a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80") no-repeat;
+    background-size:cover;
+
+    position: center;
+}
+.container .hold{
+    padding: 5px 0;
+}
+.container .hold h1{
+    color : black;
+    font-size: 50px;
+    margin-top: 10px;
+
+}
