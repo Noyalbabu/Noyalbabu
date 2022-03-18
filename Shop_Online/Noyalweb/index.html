@@ -1,0 +1,134 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="css/mobile.css"> -->
+<link rel="stylesheet" href="css/desktop.css">
+
+
+
+
+<title>TK Groups</title>
+</head>
+<body>
+<div class="container">
+	<header>
+		<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="shop.php">Shop</a></li>
+			<li><a href="basket.php">Basket</a></li>
+		</ul>
+	</nav>
+	</header>
+	<div class="banner">
+		<h2>Welcome</h2>
+	</div>
+		<div class="main">
+		<center>
+
+<p>Click the image for details</p>
+		  <div class="menu">
+
+	        	<ul>
+	        		<div class="menugrid">
+	          		<li><a href="#"><img src="images/menuImage1.jpg" alt="" style="width:200px"></a>
+	          		<div class="infoPanel">
+	         		<p>Mens</p>
+	        		</div></li>
+	    			</div>
+
+			          <div class="menugrid">
+			          <li><a href="#"><img src="images/menuImage2.jpg" alt="" style="width:200px"></a>
+			          <div class="infoPanel">
+			         <p>Kids</p>
+			        </div></li>
+			    	</div>
+
+			          <div class="menugrid">
+			         <li><a href="#"><img src="images/menuimage3.jpg" alt="" style="width:200px"></a>
+			          <div class="infoPanel">
+			         <p>Womans</p>
+			        </div></li>
+			    	</div>
+					<div class="menugrid">
+						<li><a href="#"><img src="images/menuimage4.jpg" alt="" style="width:200px"></a>
+						 <div class="infoPanel">
+						<p>Kids</p>
+					   </div></li>
+					   </div>
+
+	        </ul>
+
+		</div >
+<div class="slides">
+		<img class="mySlides" src="images/slideImage1.jpg" style="width: 100%">
+		<img class="mySlides" src="images/slideImage2.jpg" style="width: 100%">
+		<img class="mySlides" src="images/slideImage3.jpg" style="width: 100%">
+		<img class="mySlides" src="images/slideImage4.jpg" style="width: 100%">
+	</div>
+		</div>
+		
+	
+	</center>
+
+	
+	<footer>
+		<p>&copy; Copyright 2022 Noyal Babu</p>
+	</footer>
+	
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/main.js"></script>
+<script src=" http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+<script src="js/jquery.easing.js"></script>
+<script>
+	  $('.infoPanel').hide();
+	  $('.menu a').on('click',function()
+      {
+
+        console.info('menu Clicked');
+        $(this).next('.infoPanel').slideToggle('3000',"easeInOutBounce");
+      })
+
+      $("#welcomeBanner img").click(function()
+        { $("div#welcomeBanner").fadeOut(); 
+      });
+
+      var emailRegEx = /^[\w][\w\._\-]*@(?:[\w]+\.?)*[\w]\.[a-zA-Z]{2,4}$/;
+      $('input[type=email]').on('blur',function()
+      {
+        if($(this).val().search(emailRegEx)==-1)
+        {
+         
+          $('.error').fadeIn('fast');
+        }
+        else
+        {
+          
+           $('.error').hide();
+        }
+      })
+</script>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2500);    
+}
+</script>
+</body>
+</html>
