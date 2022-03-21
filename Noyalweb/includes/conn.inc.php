@@ -9,7 +9,7 @@ $pdo ->exec("SET CHARACTER SET utf8");
 
 }
 catch (PDOException $e) {
-echo 'Connection failed again: ' . $e->getMessage();
+echo 'Opps something went wrong. Failed to cinnect to the TK groups database: ' . $e->getMessage();
 }
 ?> -->
 

@@ -10,8 +10,8 @@ include ('includes/sessions.inc.php');
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" media="only screen and (min-width : 600px)" href="css/desktop.css">
-<link rel="stylesheet" media="only screen and (min-width : 600px)" href="css/desktopForm.css">
+<link rel="stylesheet" media="only screen and (min-width : 600px)" href="css/desktopNew.css">
+<link rel="stylesheet" media="only screen and (min-width : 600px)" href="css/desktopformnew.css">
 <title>Login</title>
 </head>
 

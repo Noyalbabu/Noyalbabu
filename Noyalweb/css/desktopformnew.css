@@ -63,11 +63,12 @@ span.psw {
 
 .modal {
     display: none; 
-    position: fixed;
-    width: 20%; 
+    position: absolute;
+    width: 30%; 
     height: 50%; 
-    overflow: auto; 
     background-color: #a14f61;
+    color: white;
+    
 }
 .loginAnimation{
     padding-left: 400px;
@@ -111,13 +112,3 @@ span.psw {
     to {transform: scale(1)}
 }
 
-
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-}

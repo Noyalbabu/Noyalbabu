@@ -4,9 +4,18 @@ include ('includes/sessions.inc.php');
 ini_set('display_errors', 1);
 
 
-$sql = "SELECT * FROM womanCloths";
+$sql = "SELECT * FROM cloths ";
 $stmt = $pdo->query($sql);
-$totalnoCloths = $stmt->rowCount();
+
+if (isset($_POST['remove'])){
+	foreach ($_SESSION['basket'] as $key=>$value){
+	if ($value["productId"] == $_POST['purchasedId']){
+		unset($_SESSION['basket'][$key]);
+		echo "<script> alert ('This item has been removed....')</script>";
+		echo "<script> window.location = 'basket.php'</script>";
+	}
+ }
+}
 
 ?> 
 
@@ -15,7 +24,7 @@ $totalnoCloths = $stmt->rowCount();
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" media="only screen and (min-width : 600px)" href="css/desktop.css">
+<link rel="stylesheet" media="only screen and (min-width : 600px)" href="css/desktopNew.css">
 <title>	Basket</title>
 </head>
 
@@ -41,21 +50,45 @@ $totalnoCloths = $stmt->rowCount();
 			<?php
 
     if(isset($_SESSION['login'])){
-
-							while($row = $stmt->fetchObject()){
-					echo "<div class=\"grid\">";
-					echo "<div><img src=\"images/{$row->clothsImages}\"></div>";
-					echo "<div class=\"imageName\">{$row->clothsName}</div>";
-					echo "</div>";
+					if (isset($_SESSION['basket'])){
+						extract($_POST);
+						
+						$total = 0;
+						$productId = array_column($_SESSION['basket'],'productId')  ;
+						
+						while($row = $stmt->fetchObject()){
+								foreach ($productId as $purchasedId) {	
+									if ($purchasedId == $row->clothsId){
+										echo "<form method = 'post' >";
+										echo "<div class=\"grid\">";
+										echo "<div><img src=\"images/{$row->clothsImages}\"></div>";
+										echo "<div class=\"imageName\">{$row->clothsName}</div>";
+										echo "<div class =\"imageName\">{$row ->clothPrice}</div>";
+										echo " 
+										<input type = 'submit' name = 'remove' value = 'Remove from basket'/>
+										<input type = 'hidden' name = 'purchasedId' value = '$row->clothsId'/>";
+                                        $total = $total + (double) $row->clothPrice;
+										echo "</div> </form>";
+   							        }														
+								}
+								
+					       
+						}
+						echo "<div>
+						<h3>Checkout</h3>
+						Total Price = $total;
+						</div>";
+					}
 				}
 				//logout
-				// remove 			
-		
-    }
+						
 	else{
-		echo "<div class=\"imageName\">Please Login   </div>";
+		echo "<div class=\"login-grid\">";
+		echo "<div class=\"imageName\">Please Login</div>";
 		echo "<a href=\"login.php\">Login</a>";
+		echo "</div>";
 	}
+	 
 ?>
 		</div>
 		<footer>

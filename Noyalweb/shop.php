@@ -1,15 +1,47 @@
+
 <?php 
+
+
 require('includes/conn.inc.php'); 
-$sql = "SELECT * FROM womanCloths";
+require_once('includes/sessions.inc.php');
+
+
+$sql = "SELECT * FROM cloths";
 $stmt = $pdo->query($sql);
-$totalnoCloths = $stmt->rowCount();
+$totalnoCloths = $stmt->rowCount(); 
 
-$sqlMen = "SELECT * FROM  mensCloths";
-$stmtMen = $pdo->query($sqlMen);
-$totalnoMensCloths = $stmtMen->rowCount();
 
+if (isset($_POST["add"])){
+        
+    if (isset($_SESSION['basket'])){
+
+        $item_in_array = array_column($_SESSION['basket'],'productId');
+        if (in_array($_POST['clothsId'],$item_in_array)){
+            echo "<script> alert ('You have already added this item to your cart....')</script>";
+            echo "<script> window.location = 'shop.php'</script>";
+        }else{
+        $count = count($_SESSION['basket']); //returns number of elements in the array 
+        $item_array = array(
+            'productId' => $_POST["clothsId"]
+            ); 
+       
+        $_SESSION['basket'][$count] = $item_array;   
+        
+        }
+
+}
+
+    else{
+    $item_array = array(
+        'productId' => $_POST["clothsId"]
+    );
+    $_SESSION['basket'][0] = $item_array;
+   
+    }
+}
 
 ?>
+
 
 <!doctype html>
 <html>
@@ -17,7 +49,7 @@ $totalnoMensCloths = $stmtMen->rowCount();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/desktopNew.css">
 </head>
 
 <body>
@@ -42,38 +74,32 @@ $totalnoMensCloths = $stmtMen->rowCount();
 
 		<div class="divider">Woman</div>
 		
-            <div class="content">
+            <div class="shopContent">
 
 
-                <?php
+                        <?php
 					
-									while($row = $stmt->fetchObject()){
+						    while($row = $stmt->fetchObject()){
+                            echo "<form method = 'post' >";
 							echo "<div class=\"grid\">";
 							echo "<div><img src=\"images/{$row->clothsImages}\"></div>";
 							echo "<div class=\"imageName\">{$row->clothsName}</div>";
+                            echo "<div class=\"imageName\">{$row->clothPrice}</div>";
+                            echo "<div class=\"imageNameDet\">{$row->details}</div>";
+                            echo"
+                            <input type = 'number' name = 'quantity' min = '1' placeholder = 'Enter the quantity'/>
+                            <input type ='submit' name = 'add' value ='Add to basket'/>
+                            <input type = 'hidden' name ='clothsId'  value = '$row->clothsId'/>";
+                            
+                            
 							echo "</div>";
-						}
-                        // array
-									?>
+                            echo"</form>";
+						   } 
+                           ?>
+                     
+					
                                 
             </div>
-			<div class="divider">Mens</div>
-
-            <div class="content">
-
-                <?php
-					
-					while($row = $stmtMen->fetchObject()){
-			echo "<div class=\"grid\">";
-			echo "<div><img src=\"images/{$row->clothsImages}\"></div>";
-			echo "<div class=\"imageName\">{$row->clothsName}</div>";
-			echo "</div>";
-		}
-					?>
-
-
-            </div>
-        </div>
         <footer>
             <p>&copy; Copyright 2017</p>
         </footer>
