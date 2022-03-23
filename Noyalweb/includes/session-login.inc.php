@@ -2,7 +2,6 @@
 <div id="login">
 <?php 
 
-///////////////////// conditional message /////////////////
 
 
 ?>
